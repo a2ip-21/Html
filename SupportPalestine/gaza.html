@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaza Crisis Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+ 
+        :root {
+            --palestinian-red: #E4312b;
+            --palestinian-green: #149954;
+            --palestinian-black: #000000;
+            --palestinian-white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--palestinian-black);
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: var(--palestinian-green);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        .navbar li {
+            margin: 0 1rem;
+        }
+
+        .navbar a {
+            color: var(--palestinian-white);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: var(--palestinian-red);
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 2rem;
+            background-color: var(--palestinian-white);
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(145deg, var(--palestinian-green), var(--palestinian-red));
+            color: var(--palestinian-white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .city-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: #f8f8f8;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .city-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .city-image:hover {
+            transform: scale(1.05);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        h1, h2, h3 {
+            color: var(--palestinian-green);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--palestinian-green);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .emergency-banner {
+            background-color: var(--palestinian-red);
+            color: var(--palestinian-white);
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+        
+        </style>
+</head>
+<body>
+   
+    <nav class="navbar">
+        <ul>
+               <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Gaza</a></li>
+            <li><a href="support.html"><i class="fas fa-hand-holding-heart"></i> Support Gaza</a></li>
+        </ul>
+    </nav>
+    
+    
+
+    <div class="content">
+        <div class="emergency-banner fade-in">
+            <h2 style="color: white; border: none;">HUMANITARIAN CRISIS IN GAZA</h2>
+            <p style="text-align: center;">Immediate aid needed for civilians affected by the ongoing crisis</p>
+        </div>
+
+        <h1 class="fade-in">Gaza Crisis Information Center</h1>
+
+        <div class="stats-grid fade-in">
+            <div class="stat-card">
+                <div class="stat-number">2.2M+</div>
+                <div class="stat-label">People Affected</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100K+</div>
+                <div class="stat-label">Casualties</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">600K+</div>
+                <div class="stat-label">Children Affected</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">45K+</div>
+                <div class="stat-label">The martyrs</div>
+            </div>
+        </div>
+
+        <section class="city-section fade-in">
+            <h2>Rafah</h2>
+            <p>Located in the southern Gaza Strip, Rafah has become a focal point of the humanitarian crisis. The city, which traditionally served as a vital crossing point with Egypt, now faces unprecedented challenges as thousands of displaced Palestinians seek refuge within its boundaries.</p>
+            <div class="city-grid">
+                <img src="https://i.pinimg.com/736x/74/20/35/74203501e523c7640b34e2617913b8a5.jpg" alt="Rafah City" class="city-image">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPuf5uFngWPQC3Du7l1vxUJnfP0VYsDM9DH3r66lKAKetkkdrBQGGyoFQ5axjo-INcmARn4cBQcbjX4XWzu7x2hA7G5_WVUtJYC0crc3cNE547PP8HoVQogj6gwt88p5Gf9ZsV7ilYCff0mZ_TH0QVwk9YW2wRn3a36EGxrEtLEAx0ZOrKx52FJnyaUkd-/w502-h497/Screenshot%202025-01-01%207.43.34%20PM.png" alt="Rafah Situation" class="city-image">
+            </div>
+        </section>
+
+        <section class="city-section fade-in">
+            <h2>Deir al-Balah</h2>
+            <p>Deir al-Balah, located in central Gaza, has become a crucial shelter for thousands of displaced families. The city's infrastructure and resources are severely strained as it attempts to accommodate the influx of people seeking safety from nearby conflict zones.</p>
+            <div class="city-grid">
+                <img src="https://www.aljazeera.com/wp-content/uploads/2023/12/AA-20231202-33083970-33083968-ISRAELI_ATTACKS_CONTINUE_IN_GAZA-1701518182.jpg?fit=1170%2C832&quality=80" alt="Deir al-Balah Current Situation" class="city-image">
+                <img src="https://www.aljazeera.com/wp-content/uploads/2023/12/AA-20231202-33082205-33082199-ISRAELI_ATTACKS_CONTINUE_IN_GAZA-1701518568.jpg?fit=1170%2C748&quality=80" alt="Deir al-Balah Impact" class="city-image">
+            </div>
+        </section>
+
+        <section class="city-section fade-in">
+            <h2>Khan Younis</h2>
+            <p>Khan Younis, one of Gaza's largest cities, has experienced significant impact from the ongoing crisis. The city's healthcare facilities are overwhelmed, and basic necessities are in critically short supply as it struggles to support both its resident population and displaced persons.</p>
+            <div class="city-grid">
+                <img src="https://www.aljazeera.com/wp-content/uploads/2023/10/5Q8B0785-copy-1697625199.jpg?fit=1170%2C780&quality=80" alt="Khan Younis Current State" class="city-image">
+                <img src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/NFOMVXVD2JOV3KSWO6MPS6Y7PU.jpg" alt="Khan Younis Impact" class="city-image">
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const fadeElems = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeElems.forEach(elem => observer.observe(elem));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Gaza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --palestinian-red: #E4312b;
+            --palestinian-green: #149954;
+            --palestinian-black: #000000;
+            --palestinian-white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--palestinian-black);
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: var(--palestinian-green);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        .navbar li {
+            margin: 0 1rem;
+        }
+
+        .navbar a {
+            color: var(--palestinian-white);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: var(--palestinian-red);
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 2rem;
+            background-color: var(--palestinian-white);
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .donation-card {
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .donation-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .donation-amount {
+            font-size: 2rem;
+            color: var(--palestinian-green);
+            margin: 1rem 0;
+        }
+
+        .donation-description {
+            margin-bottom: 1.5rem;
+        }
+
+        .donate-btn {
+            background-color: var(--palestinian-green);
+            color: var(--palestinian-white);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .donate-btn:hover {
+            background-color: var(--palestinian-red);
+        }
+
+        .custom-donation {
+            background-color: #f8f8f8;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .custom-donation input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 1rem 0;
+            border: 2px solid var(--palestinian-green);
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+
+        .support-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .support-card {
+            background-color: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .support-icon {
+            font-size: 2.5rem;
+            color: var(--palestinian-green);
+            margin-bottom: 1rem;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        h1, h2 {
+            color: var(--palestinian-green);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .donation-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+    
+</head>
+<body>   
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="gaza.html"><i class="fas fa-map-marker-alt"></i> Gaza</a></li>
+            <li><a href="#"><i class="fas fa-hand-holding-heart"></i> Support Gaza</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1 class="fade-in">Support Gaza</h1>
+
+        <section class="fade-in">
+            <h2>Make a Donation</h2>
+            <div class="donation-grid">
+                <div class="donation-card">
+                    <div class="donation-amount">$50</div>
+                    <p class="donation-description">Provides emergency food supplies for one family</p>
+                    <button class="donate-btn">Donate $50</button>
+                </div>
+                <div class="donation-card">
+                    <div class="donation-amount">$100</div>
+                    <p class="donation-description">Supplies medical aid and essential medications</p>
+                    <button class="donate-btn">Donate $100</button>
+                </div>
+                <div class="donation-card">
+                    <div class="donation-amount">$200</div>
+                    <p class="donation-description">Provides shelter and basic necessities for displaced families</p>
+                    <button class="donate-btn">Donate $200</button>
+                </div>
+            </div>
+
+            <div class="custom-donation fade-in">
+                <h2>Custom Donation Amount</h2>
+                <input type="number" placeholder="Enter amount in USD" min="1" step="1">
+                <button class="donate-btn">Make Custom Donation</button>
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <h2>Other Ways to Help</h2>
+            <div class="support-options">
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Spread Awareness</h3>
+                    <p>Share information about the crisis on social media and in your community</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Volunteer</h3>
+                    <p>Join local organizations supporting Gaza relief efforts</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>Donate Supplies</h3>
+                    <p>Contribute essential items through verified collection points</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Sign Petitions</h3>
+                    <p>Support humanitarian initiatives and peace efforts</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const fadeElems = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeElems.forEach(elem => observer.observe(elem));
+
+            // Add click handlers for donation buttons
+            document.querySelectorAll('.donate-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    alert('Thank you for your interest in supporting Gaza. This is a demo website. Please visit official humanitarian organizations to make actual donations.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
